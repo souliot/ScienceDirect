@@ -1,0 +1,20 @@
+{
+  "name": "SCI-Download",
+  "description": "下载Sci文献",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": "logo.ico",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [{
+    "js": ["js/download.js"],
+    "matches": ["http://*.xilesou.top/*", "https://*.xilesou.top/*"],
+    "exclude_globs": ["https://*.xilesou.top/search/*"],
+    "run_at": "document_end"
+  }],
+  "icons": {
+    "16": "logo.ico"
+  }
+}
